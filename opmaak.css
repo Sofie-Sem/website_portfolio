@@ -8,6 +8,7 @@
 
 body{
     font-family: Tahoma;
+    background: #f4f1de;
 }
 
 nav{
@@ -52,7 +53,7 @@ a.active, a:hover{
     font-size: 30px;
     color: white;
     float: right;
-    line-height: 80px;
+    line-height: 120px;
     margin-right: 40px;
     cursor: pointer;
     display: none;
@@ -85,11 +86,12 @@ a.active, a:hover{
         position: fixed;
         width: 100%;
         height: 100vh;
-        background: Blue;
-        top: 80px;
+        background: #5e0b15;
+        top: 120px;
         left: -100%;
         text-align: center;
         transition: all .5s;
+        z-index: 1;
     }
 
     nav ul li{
@@ -102,12 +104,47 @@ a.active, a:hover{
     }
     a:hover, a:active{
         background: none;
-        color: #5e0b15;
+        color: #000;
     }
     #check:checked ~ ul{
         left: 0;
     }
 }
+
+.slider-wrapper{
+    position: relative;
+}
+
+.slider-wrapper .slide-button{
+    position: absolute;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    color: #f4f1de;
+    border: none;
+    outline: none;
+    background: #000;
+    font-size: 2.2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.slider-wrapper .slide-button:hover{
+    background: #444;
+}
+
+.slider-wrapper .slide-button#prev-slide{
+    left: -20px;
+    display: none;
+
+}
+
+.slider-wrapper .slide-button#next-slide{
+    right: -20px;
+    
+}
+
 
 .slider-wrapper .image-list{
     display: grid;
@@ -125,23 +162,31 @@ a.active, a:hover{
 }
 
 .slider-wrapper .image-list .image-item{
-    width: 325px;
     height: 400px;
     object-fit: cover;
 }
 
-section{
+.photo-text{
     display: flex;
-    align-items: center;
+    margin: 2%;
+    margin-left: 5%;
+}
+
+section{
+    padding-left: 5%;
+    margin-bottom: -60px;
+    margin-top: 20px;
     justify-content: center;
     min-height: 100vh;
-    background: white;
+    background: #f4f1de;
 }
 
 .photos{
     max-width: 1400px;
     width: 95%;
 }
+
+
 
 .photos .slider-scrollbar{
     height: 24px;
@@ -186,4 +231,23 @@ section{
     right: 0;
     top: -10px;
     bottom: -10px;
+}
+
+@media (max-width: 1023px){
+    .slider-wrapper .slide-button{
+        display: none!important;
+    }
+
+    .slider-wrapper .image-list{
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .slider-wrapper .image-list .image-item{
+        height: 380px;
+    }
+
+    .slider-scrollbar .scrollbar-thumb{
+        width: 20%;
+    }
 }
