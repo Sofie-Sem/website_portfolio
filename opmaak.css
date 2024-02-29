@@ -1,19 +1,19 @@
+/* Set basics */
 *{
     padding: 0;
     margin: 0;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    
 }
-
 
 body{
     font-family: Tahoma;
-    background: #f4f1de;
     background: #F9F9F9;
 }
 
+
+/* navigation bar */
 nav{
     background: #90323d;
     height: 15vh;
@@ -52,7 +52,7 @@ nav ul li a.active, nav ul li a:hover{
     transition: .5s;
 }
 
-.checkbtn{
+.checkbtn{  /* Hamburger icon */
     font-size: 30px;
     color: #F9F9F9;
     float: right;
@@ -62,22 +62,21 @@ nav ul li a.active, nav ul li a:hover{
     display: none;
 
 }
-
 #check{
     display: none;
 }
 
+/* Footer */
 footer{
     background-color: #90323d;
-    /* height: 12vh ; */
     padding-top: 20px;
     padding-bottom: 20px;
     color: #F9F9F9;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
 }
+
 footer div{
     display: flex;
     align-items: center;
@@ -91,8 +90,8 @@ footer a{
     padding: 7px;
     padding-top: 5px;
     border-radius: 5px;
-
 }
+
 footer a:hover{
     transition: all .5s;
     background-color: #5e0b15;
@@ -103,14 +102,13 @@ footer img{
     margin: 10px;
 }
 
-
-
-
-
+/* Photo gallery */
 .slider-wrapper{
     position: relative;
+
 }
 
+/* Left and right buttons */
 .slider-wrapper .slide-button{
     position: absolute;
     top: 50%;
@@ -133,15 +131,13 @@ footer img{
 .slider-wrapper .slide-button#prev-slide{
     left: -20px;
     display: none;
-
 }
 
 .slider-wrapper .slide-button#next-slide{
     right: -20px;
-    
 }
 
-
+/* Foto list */
 .slider-wrapper .image-list{
     display: grid;
     gap: 18px;
@@ -149,12 +145,18 @@ footer img{
     margin-bottom: 30px;
     overflow-x: auto;
     scrollbar-width: none;
-    grid-template-columns: repeat(11, 1fr);
-
+    
+}
+.p1 .slider-wrapper .image-list{
+    grid-template-columns: repeat(14, 1fr);
 }
 
-.slider-wrapper .image-list::-webkit-scrollbar{
-    display: none;
+.p2 .slider-wrapper .image-list{
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.p3 .slider-wrapper .image-list{
+    grid-template-columns: repeat(6, 1fr);
 }
 
 .slider-wrapper .image-list .image-item{
@@ -164,26 +166,26 @@ footer img{
 
 .photo-text{
     display: flex;
-    margin: 2%;
+    margin-top: 5%;
     margin-left: 5%;
-}
-
-section{
-    padding-left: 5%;
-    margin-bottom: -60px;
-    margin-top: 20px;
-    justify-content: center;
-    min-height: 100vh;
-    background: #F9F9F9;
+    margin-right: 5%;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #000;
 }
 
 .photos{
-    max-width: 1400px;
+    padding-left: 5%;
+    margin-top: 20px;
+    /* justify-content: center; */
+    min-height: 80vh;
+    margin-right: 0;
+    /* background: #F9F9F9; */
+    /* max-width: 1400px; */
     width: 95%;
 }
 
 
-
+/* Scroll bar with the photo gallery */
 .photos .slider-scrollbar{
     height: 24px;
     width: 100%;
@@ -200,7 +202,7 @@ section{
 }
 
 .slider-scrollbar:hover .scrollbar-track{
-    height: 4px;
+    height: 4px; /* make bar thicker */
 
 }
 
@@ -221,7 +223,7 @@ section{
 }
 
 .slider-scrollbar .scrollbar-thumb:after{
-    content: "";
+    /* content: ""; */
     position: absolute;
     left: 0;
     right: 0;
@@ -229,6 +231,7 @@ section{
     bottom: -10px;
 }
 
+/* Projects */
 .project-box{
     display: flex;
     width: 100%;
@@ -277,6 +280,7 @@ section{
     margin-bottom: 6px;
 }
 
+/* Home page */
 .prof-box{
     background: #90323d;
     height: 85vh;
@@ -329,11 +333,8 @@ section{
 
 
 
-@media (max-width: 1023px){
-    .slider-wrapper .slide-button{
-        display: none!important;
-    }
-
+/* Small laptop */
+@media only screen and (max-width: 952px){
     .slider-wrapper .image-list{
         gap: 10px;
         margin-bottom: 15px;
@@ -346,13 +347,14 @@ section{
     .slider-scrollbar .scrollbar-thumb{
         width: 20%;
     }
-}
 
-@media only screen and (max-width: 952px){
+    .slider-wrapper .slide-button{
+        display: none;
+    }
+    
     label.name{
         font-size: 30px;
         padding-left: 50px;
-
     }
     nav ul li a{
         font-size: 16px;
@@ -383,53 +385,45 @@ section{
         display: flex;
         margin-top: 20px;
         align-content: center;
-        /* padding-left: 20%; */
         flex-wrap: wrap;
     }
-
     .prof-box{
         display: block;
         height: auto;
     }
-
     .prof_picture{
         width: 100%;
         border-radius: 0;
         height: 40vh;
     }
 
-    .prof_text{
-        padding: 10%;
-        width: 100%;
-    }
     .prof_picture img{
         height: 90%;
         width: auto;
     }
-
-
+    .prof_text{
+        padding: 10%;
+        width: 100%;
+    }
     
-
 }
 
+/* Big phone/tablet */
 @media (max-width: 858px) {
     .checkbtn{
         display: block;
-
     }
-
     ul{
         position: fixed;
         width: 100%;
-        height: 100vh;
+        height: 90vh;
         background: #5e0b15;
-        top: 100px;
-        left: -100%;
+        top: 15vh;
+        left: -100%; /* makes nav bar invisble */
         text-align: center;
         transition: all .5s;
         z-index: 1;
     }
-
     nav ul li{
         display: block;
         margin: 50px;
@@ -439,18 +433,21 @@ section{
         font-size: 20px;
     }
     nav ul li a:hover, nav ul li a:active{
-        background: none;
-        color: #000;
+        background: #90323d;
     }
     #check:checked ~ ul{
-        left: 0;
+        left: 0; /* make nav bare visible when button pressed */
+    }
+
+    .contact{
+        display: none;
     }
 }
 
+
+/* Phone */
 @media (max-width: 550px) {
     label.name{
         font-size: 20px;
-
     }
-
 }
