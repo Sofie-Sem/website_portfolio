@@ -173,7 +173,7 @@ footer img{
     border-bottom: 3px solid #000;
 }
 
-.photos{
+#photos{
     padding-left: 5%;
     margin-top: 20px;
     /* justify-content: center; */
@@ -186,7 +186,7 @@ footer img{
 
 
 /* Scroll bar with the photo gallery */
-.photos .slider-scrollbar{
+#photos .slider-scrollbar{
     height: 24px;
     width: 100%;
     display: flex;
