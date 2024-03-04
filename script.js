@@ -6,8 +6,6 @@ const initSlider = (container) => {
     const scrollbarThumb = document.querySelector("." + container + " .scrollbar-thumb");
     const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth - 5; // max scroll length
 
-    console.log(scrollbarThumb)
-
     scrollbarThumb.addEventListener("mousedown", (e) => { //clicked on scrollbar_thumb
         const startX = e.clientX; //horizontal location mouse
         const thumbPosition = scrollbarThumb.offsetLeft; //Left distance of the scrollbar_thumb compared to scrollbar_track
@@ -64,7 +62,7 @@ const initSlider = (container) => {
 window.addEventListener("load", () => {
     const photosContainer = document.querySelectorAll("#photos");
 
-    photosContainer.forEach(container => {
+    photosContainer.forEach(container => { //for each photos box make individual slider
         initSlider(container.className);
     });
 })

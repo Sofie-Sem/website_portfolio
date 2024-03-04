@@ -145,10 +145,16 @@ footer img{
     margin-bottom: 30px;
     overflow-x: auto;
     scrollbar-width: none;
-    
 }
+
+.slider-wrapper .image-list .image-item{
+    height: 400px;
+    object-fit: cover;
+}
+
+/* repeat every photo right amount of times in the grid. */ 
 .p1 .slider-wrapper .image-list{
-    grid-template-columns: repeat(14, 1fr);
+    grid-template-columns: repeat(14, 1fr); /* equal to amount photos */
 }
 
 .p2 .slider-wrapper .image-list{
@@ -157,11 +163,6 @@ footer img{
 
 .p3 .slider-wrapper .image-list{
     grid-template-columns: repeat(6, 1fr);
-}
-
-.slider-wrapper .image-list .image-item{
-    height: 400px;
-    object-fit: cover;
 }
 
 .photo-text{
@@ -176,11 +177,8 @@ footer img{
 #photos{
     padding-left: 5%;
     margin-top: 20px;
-    /* justify-content: center; */
     min-height: 80vh;
     margin-right: 0;
-    /* background: #F9F9F9; */
-    /* max-width: 1400px; */
     width: 95%;
 }
 
@@ -236,17 +234,14 @@ footer img{
     display: flex;
     width: 100%;
     padding-bottom: 10vh;
-    /* height: 85vh; */
     background: #F9F9F9;
 }
 
 .project-box a{
     padding: 7px;
     border-radius: 5px;
-    /* margin-bottom: 10px; */
     background-color: #90323d;
     color: #F9F9F9;
-    /* text-decoration: underline; */
 }
 
 .project-box a:hover{
@@ -258,7 +253,6 @@ footer img{
 .project-photo{
     background: #F9F9F9;
     width: 50%;
-    /* height: 100%; */
 }
 .project-photo img{
     display: block;
@@ -269,9 +263,7 @@ footer img{
 .project-text{
     padding: 90px; 
     padding-top: 110px; 
-    /* align-items: center; */
     width: 50%;
-    /* height: 85vh; */
     background: #F9F9F9;
 }
 .project-text h2{
@@ -349,7 +341,7 @@ footer img{
     }
 
     .slider-wrapper .slide-button{
-        display: none;
+        display: none!important;
     }
     
     label.name{
